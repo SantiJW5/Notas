@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  letter-spacing: 1px;
+  
+ 
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  background-image:
+                radial-gradient(circle at 0% 30%, rgba(24, 28, 48, 0.541) 0%, transparent 40%),
+                radial-gradient(circle at 90% 20%, rgba(19, 22, 48, 0.815) 0%, transparent 60%),
+                radial-gradient(circle at 20% 80%, rgba(14, 20, 39, 0.678) 0%, transparent 60%);
+            background-repeat: no-repeat;
+            background-size: cover;
+  transition: 1s ease-in-out;
+  color: white;
+}
+
+#board {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  background: linear-gradient(100deg, rgba(15, 27, 32, 0.733),rgba(10, 10, 24, 0.658));
+  box-shadow:
+    0 15px 30px rgb(0, 0, 0),
+    inset 0 1px 0 rgba(255, 255, 255, 0.082);
+  cursor: pointer;
+  margin: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+
+
+/*nuevo*/
+.add-card {
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  color: #ceaf00;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: grid;
+  place-items: center;
+}
+
+.modal-box {
+  background: #020617;
+  padding: 24px;
+  border-radius: 16px;
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.image-card {
+  background-size: cover;
+  background-position: center;
+}
+/*/////////////////////////////////////////*/
+.editor {
+  position: fixed;
+  inset: 0;
+  background: rgb(0, 0, 0);
+  background-image:
+                radial-gradient(circle at 0% 30%, rgba(11, 13, 22, 0.541) 0%, transparent 40%),
+                radial-gradient(circle at 90% 20%, rgba(10, 10, 32, 0.815) 0%, transparent 60%),
+                radial-gradient(circle at 20% 80%, rgba(16, 16, 29, 0.678) 0%, transparent 60%);
+            background-repeat: no-repeat;
+            background-size: cover;
+  padding: 16px;
+}
+/*boton volver*/
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  box-shadow:  0 0 5px white;
+  border-radius: 50%;
+}
+.back-btn img{
+  width: 60%;
+}
+
+textarea {
+  width: 100%;
+  height: 70%;
+  margin-top: 16px;
+  background: #122faf00;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+input[type="color"] {
+  margin-top: 16px;
+  width: 100px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.ctx {
+  position: fixed;
+  z-index: 9999;
+  min-width: 140px;
+  background: #0055ff;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.6);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.ctx button {
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.ctx button:hover {
+  background: rgba(56,189,248,.18);
+}
+
+.hidden { display: none; }

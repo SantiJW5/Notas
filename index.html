@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Board</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@200..700&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+</head>
+<div class="editor hidden" id="editor">
+  <button class="back-btn" id="backBtn"><img src="/img/arrow.png" alt="">
+  </button>
+  <input type="color" id="colorPicker">
+  <textarea id="textArea" placeholder="Escribe aquí..."></textarea>
+</div>
+
+<body>
+
+  <main id="board">
+    <div class="card add-card" id="addCard">+</div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-box">
+      <input type="text" id="titleInput" placeholder="Nombre">
+      <input type="file" id="imageInput" accept="image/*">
+      <!--botones de salvar y cancelar-->
+      <div class="modal-actions">
+        <button id="saveBtn">Guardar</button>
+        <button id="cancelBtn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  <!-- Menú contextual -->
+  <div class="ctx hidden" id="ctxMenu">
+    <button id="deleteCardBtn">Eliminar</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
